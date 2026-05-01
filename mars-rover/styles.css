@@ -1,0 +1,204 @@
+/*  
+  Project: NASA Mars Rovers
+  Description: External stylesheet for JPL educational project
+*/
+
+/* --- Variables for Consistency --- */
+:root {
+  --nasa-blue: #0b3d91;
+  --nasa-red: #fc3d21;
+  --mars-dust: #c1440e;
+  --space-black: #0b0b0b;
+  --text-white: #f1f1f1;
+  --card-bg: #1a1a1a;
+  --transition: all 0.3s ease;
+}
+
+/* --- Base Reset & Typography --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--space-black);
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Accessibility: Keyboard Navigation --- */
+/* Ensures users navigating via 'Tab' can see where they are */
+a:focus, button:focus {
+  outline: 3px solid var(--nasa-red);
+  outline-offset: 4px;
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px 0;
+  border-bottom: 2px solid var(--nasa-blue);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.header-text h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  color: var(--nasa-red);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+nav a:hover, nav a.active {
+  color: var(--nasa-red);
+  border-bottom: 2px solid var(--nasa-red);
+}
+
+/* --- Main Content Area --- */
+#main-content {
+  padding: 40px 0;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--nasa-blue), transparent);
+  margin: 40px 0;
+}
+
+/* --- Grid for Rover Cards --- */
+.rover-intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.rover-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: var(--transition);
+}
+
+.rover-card:hover {
+  border-color: var(--nasa-blue);
+  transform: translateY(-5px);
+}
+
+.home-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Keeps NASA images from looking stretched */
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* --- Mission Table (For missions.html) --- */
+.mission-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: var(--card-bg);
+}
+
+.mission-table th, .mission-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.mission-table th {
+  background-color: var(--nasa-blue);
+  color: white;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background: #050505;
+  padding: 60px 0 20px;
+  margin-top: 80px;
+  border-top: 1px solid #222;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--nasa-red);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #888;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav ul {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Technical Requirement: Meta Tags -->
+  <title>Home | NASA Mars Rovers</title>
+  <meta name="description" content="Explore the NASA Mars Rover Program, our robotic explorers on the Red Planet.">
+  <meta name="keywords" content="NASA, Mars, Rovers, Space Exploration, JPL">
+  <meta name="robots" content="noindex">
+
+  <!-- Technical Requirement: External CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Technical Requirement: ARIA Landmark -->
+  <header role="banner" class="site-header">
+    <div class="container header-flex">
+      <!-- Branding: Official NASA Logo -->
+      <img src="img/nasa-logo.png" alt="NASA Meatball Logo" class="logo">
+      
+      <div class="header-text">
+        <h1>NASA Mars Rovers</h1>
+        <p class="tagline">Robotic Explorers on the Red Planet</p>
+      </div>
+
+      <!-- Technical Requirement: Consistent Navigation -->
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="missions.html">Missions</a></li>
+          <li><a href="accomplishments.html">Accomplishments</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Technical Requirement: Main Content Landmark -->
+  <main id="main-content">
+    <section class="hero container">
+      <h2>Curiosity-Driven Exploration</h2>
+      <p>
+        NASA’s Mars Exploration Program is a science-driven effort to understand whether Mars was, is, or can be a habitable world. 
+        By sending robotic explorers like Curiosity and Perseverance, the Jet Propulsion Laboratory (JPL) seeks to uncover the 
+        secrets of the Red Planet’s climate, geology, and potential for ancient life.
+      </p>
+    </section>
+
+    <hr class="divider">
+
+    <section class="container rover-intro">
+      <div class="rover-card">
+        <h3>Perseverance</h3>
+        <p>The newest resident of Jezero Crater, searching for signs of ancient microbial life.</p>
+        <!-- Technical Requirement: Image with Descriptive Alt Text -->
+        <img src="img/perseverance-home.jpg" alt="The Perseverance rover using its robotic arm to examine a Martian rock." class="home-img">
+      </div>
+
+      <div class="rover-card">
+        <h3>Curiosity</h3>
+        <p>A car-sized laboratory that has been exploring Gale Crater since 2012.</p>
+        <img src="img/curiosity-home.jpg" alt="A self-portrait of the Curiosity rover on the dusty surface of Mars." class="home-img">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Technical Requirement: Email Link -->
+      <p>For educational inquiries, contact <a href="mailto:education@jpl.nasa.gov">JPL Education</a>.</p>
+      
+      <!-- Technical Requirement: External Site Link -->
+      <p>Visit the official <a href="https://mars.nasa.gov" target="_blank" rel="noopener">NASA Mars Exploration Site</a> for more data.</p>
+
+      <hr>
+
+      <!-- Branding Requirement: Mandatory Disclaimer -->
+      <p class="disclaimer">
+        This website was created as a student project for educational purposes. NASA is not affiliated with or endorsing this work.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
