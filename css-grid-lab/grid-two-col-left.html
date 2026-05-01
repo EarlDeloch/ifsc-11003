@@ -17,7 +17,7 @@
       box-sizing: inherit;
     }
 
-    /* Starter */
+    /* Starter Styles */
     main>* {
       font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
         sans-serif;
@@ -27,11 +27,31 @@
       padding: 20px;
     }
 
+    /* --- Integrated Grid Logic --- */
     main {
       display: grid;
+      /* Defines two columns: the first for the aside, the second for content */
+      grid-template-columns: 1fr 3fr; 
       gap: 20px;
       max-width: 80vw;
       margin: 20px auto;
+    }
+
+    /* Forces Header and Footer to span the full width of both columns */
+    .primary {
+      grid-column: 1 / span 2;
+    }
+
+    /* Positions the aside in the first column and spans it across two rows */
+    aside {
+      grid-column: 1;
+      grid-row: 2 / span 2;
+    }
+
+    /* Ensures the main sections stay in the wider right-hand column */
+    #content,
+    #blog {
+      grid-column: 2;
     }
   </style>
 
@@ -42,6 +62,12 @@
     <header class="primary">
       <h1>Site Header</h1>
     </header>
+    
+    <aside>
+      <h2>Aside</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi atque.</p>
+    </aside>
+
     <section id="content">
       <header>
         <h2>#Content Section Header</h2>
@@ -51,6 +77,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
       <footer>Section Footer</footer>
     </section>
+
     <section id="blog">
       <header>
         <h2>#Blog Section Header</h2>
@@ -60,10 +87,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
       <footer>Section Footer</footer>
     </section>
-    <aside>
-      <h2>Aside</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi atque.</p>
-    </aside>
+
     <footer class="primary">Site Footer</footer>
   </main>
 </body>
