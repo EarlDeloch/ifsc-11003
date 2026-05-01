@@ -3,11 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid Lab - Left</title>
-
+  <title>CSS Grid Demo</title>
   <style>
+    /*  ---------------Box Sizing-----------------  */
     html {
       box-sizing: border-box;
     }
@@ -18,76 +17,55 @@
       box-sizing: inherit;
     }
 
-    body {
-      background-color: #ECECEC;
-      font-family: Tahoma, Geneva, sans-serif;
-      margin: 0;
-      text-align: center;
-    }
-
-    h1 {
-      color: #000;
+    /* Starter */
+    main>* {
+      font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+        sans-serif;
       font-weight: normal;
-      padding: 40px;
+      background-color: #c0c0c0;
+      border-radius: 10px;
+      padding: 20px;
     }
 
-    /* WRAPPER */
-    #wrapper {
-      width: 700px;
-      height: 500px;
-      margin: 0 auto;
-      background: #fff;
-      border: 1px solid #c0c0c0;
-
+    main {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-    }
-
-    /* BOXES */
-    #navy {
-      background: #001f3f;
-      grid-column: 1;
-      grid-row: 1 / span 3;
-    }
-
-    #teal {
-      background: #39CCCC;
-    }
-
-    #blue {
-      background: #0074D9;
-    }
-
-    #aqua {
-      background: #7FDBFF;
-    }
-
-    /* CENTER BOX */
-    #footer {
-      background: #666;
-      width: 120px;
-      height: 120px;
-      grid-column: 2;
-      grid-row: 2;
-      justify-self: center;
-      align-self: center;
+      gap: 20px;
+      max-width: 80vw;
+      margin: 20px auto;
     }
   </style>
+
 </head>
 
 <body>
-
-  <h1>Left Layout</h1>
-
-  <section id="wrapper">
-    <div id="navy">Navy</div>
-    <div id="teal">Teal</div>
-    <div id="blue">Blue</div>
-    <div id="aqua">Aqua</div>
-    <div id="footer">Center</div>
-  </section>
-
+  <main>
+    <header class="primary">
+      <h1>Site Header</h1>
+    </header>
+    <section id="content">
+      <header>
+        <h2>#Content Section Header</h2>
+      </header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
+      <footer>Section Footer</footer>
+    </section>
+    <section id="blog">
+      <header>
+        <h2>#Blog Section Header</h2>
+      </header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita repellendus aliquid iusto consectetur ut velit totam explicabo magnam. Culpa non suscipit doloribus corporis neque.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore quo exercitationem temporibus magni deserunt, quasi repellendus reiciendis? Quos, facere doloribus optio quasi numquam dolore!</p>
+      <footer>Section Footer</footer>
+    </section>
+    <aside>
+      <h2>Aside</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi atque.</p>
+    </aside>
+    <footer class="primary">Site Footer</footer>
+  </main>
 </body>
 
 </html>
