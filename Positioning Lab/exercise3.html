@@ -22,18 +22,21 @@
       font-weight: bold;
       font-family: Tahoma, Geneva, sans-serif;
       text-align: center;
+      margin: 0;
+      position: relative; /* makes body the reference */
     }
 
+    /* Smaller centered white box */
     #wrapper {
-      position: relative; /* IMPORTANT */
+      position: relative;
       background-color: #FFF;
       border: 1px solid #c0c0c0;
-      width: 800px;
-      height: 500px;
-      margin: 0 auto;
+      width: 600px;
+      height: 300px;
+      margin: 100px auto;
     }
 
-    /* Boxes */
+    /* Corner boxes (relative to PAGE) */
     #navy {
       position: absolute;
       top: 0;
@@ -71,6 +74,7 @@
       background-color: #7FDBFF;
     }
 
+    /* Center footer inside white box */
     #footer {
       position: absolute;
       top: 50%;
@@ -86,7 +90,7 @@
     }
 
     h1 {
-      margin: 30px 0;
+      margin-top: 30px;
       color: black;
       font-weight: normal;
     }
@@ -94,13 +98,17 @@
 </head>
 
 <body>
+
   <h1>Exercise</h1>
 
+  <!-- Page corner boxes -->
+  <div id="navy">Navy</div>
+  <div id="teal">Teal</div>
+  <div id="blue">Blue</div>
+  <div id="aqua">Aqua</div>
+
+  <!-- Center content -->
   <section id="wrapper">
-    <div id="navy">Navy</div>
-    <div id="teal">Teal</div>
-    <div id="blue">Blue</div>
-    <div id="aqua">Aqua</div>
     <div id="footer">Footer</div>
   </section>
 
