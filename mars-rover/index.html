@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Technical Requirement: Meta Tags -->
   <title>Home | NASA Mars Rovers</title>
-  <meta name="description" content="Explore the NASA Mars Rover Program, our robotic explorers on the Red Planet.">
-  <meta name="keywords" content="NASA, Mars, Rovers, Space Exploration, JPL">
+  <meta name="description" content="Explore the history of Martian exploration through the eyes of the Sojourner and Curiosity rovers.">
+  <meta name="keywords" content="NASA, Mars, Sojourner, Curiosity, JPL, Space Exploration">
   <meta name="robots" content="noindex">
 
   <!-- Technical Requirement: External CSS -->
@@ -15,18 +14,16 @@
 </head>
 
 <body>
-  <!-- Technical Requirement: ARIA Landmark -->
   <header role="banner" class="site-header">
     <div class="container header-flex">
-      <!-- Branding: Official NASA Logo -->
-      <img src="img/nasa-logo.png" alt="NASA Meatball Logo" class="logo">
+      <!-- Branding: Artemis Logo from assets folder -->
+      <img src="assets/ArtemisLogo.jpg" alt="NASA Artemis Program Logo" class="logo">
       
       <div class="header-text">
         <h1>NASA Mars Rovers</h1>
         <p class="tagline">Robotic Explorers on the Red Planet</p>
       </div>
 
-      <!-- Technical Requirement: Consistent Navigation -->
       <nav role="navigation" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -37,42 +34,41 @@
     </div>
   </header>
 
-  <!-- Technical Requirement: Main Content Landmark -->
   <main id="main-content">
-    <section class="hero container">
+    <!-- Hero section using your Mars background image -->
+    <section class="hero container" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/Mars.jpg'); background-size: cover; padding: 100px 20px; border-radius: 15px;">
       <h2>Curiosity-Driven Exploration</h2>
       <p>
-        NASA’s Mars Exploration Program is a science-driven effort to understand whether Mars was, is, or can be a habitable world. 
-        By sending robotic explorers like Curiosity and Perseverance, the Jet Propulsion Laboratory (JPL) seeks to uncover the 
-        secrets of the Red Planet’s climate, geology, and potential for ancient life.
+        From the first wheels on the ground to car-sized laboratories, NASA's Mars Exploration Program 
+        seeks to answer one fundamental question: Was Mars ever home to microbial life?
       </p>
     </section>
 
     <hr class="divider">
 
     <section class="container rover-intro">
-      <div class="rover-card">
-        <h3>Perseverance</h3>
-        <p>The newest resident of Jezero Crater, searching for signs of ancient microbial life.</p>
-        <!-- Technical Requirement: Image with Descriptive Alt Text -->
-        <img src="img/perseverance-home.jpg" alt="The Perseverance rover using its robotic arm to examine a Martian rock." class="home-img">
-      </div>
+      <!-- Rover 1: Sojourner -->
+      <article class="rover-card">
+        <h3>Sojourner</h3>
+        <p><strong>Mission:</strong> Mars Pathfinder</p>
+        <p>As the first rover to operate on another planet, Sojourner proved that mobile exploration of the Red Planet was possible.</p>
+        <img src="img/Sojourner.jpg" alt="The Sojourner rover, a small microwave-sized explorer on the rocky Martian surface." class="home-img">
+      </article>
 
-      <div class="rover-card">
+      <!-- Rover 2: Curiosity -->
+      <article class="rover-card">
         <h3>Curiosity</h3>
-        <p>A car-sized laboratory that has been exploring Gale Crater since 2012.</p>
-        <img src="img/curiosity-home.jpg" alt="A self-portrait of the Curiosity rover on the dusty surface of Mars." class="home-img">
-      </div>
+        <p><strong>Mission:</strong> Mars Science Laboratory</p>
+        <p>A car-sized rover designed to explore Gale Crater and assess whether Mars ever had an environment able to support life.</p>
+        <img src="img/Curiosity.jpg" alt="A self-portrait of the Curiosity rover at a drilling site on Mount Sharp." class="home-img">
+      </article>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <!-- Technical Requirement: Email Link -->
-      <p>For educational inquiries, contact <a href="mailto:education@jpl.nasa.gov">JPL Education</a>.</p>
-      
-      <!-- Technical Requirement: External Site Link -->
-      <p>Visit the official <a href="https://mars.nasa.gov" target="_blank" rel="noopener">NASA Mars Exploration Site</a> for more data.</p>
+      <p>Questions about the mission? <a href="mailto:education@jpl.nasa.gov">Contact JPL Education</a>.</p>
+      <p>Explore more at the official <a href="https://mars.nasa.gov" target="_blank" rel="noopener">NASA Mars Exploration website</a>.</p>
 
       <hr>
 
