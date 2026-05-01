@@ -3,13 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Positioning Lab - Exercise 3</title>
+  <title>Positioning Lab</title>
 
-  <style type="text/css">
-
-    
+  <style>
     html {
       box-sizing: border-box;
     }
@@ -24,101 +21,88 @@
       background-color: #ECECEC;
       font-weight: bold;
       font-family: Tahoma, Geneva, sans-serif;
-      color: #FFF;
       text-align: center;
-      line-height: 24px;
     }
 
-    
     #wrapper {
-      position: relative;
+      position: relative; /* IMPORTANT */
+      background-color: #FFF;
+      border: 1px solid #c0c0c0;
       width: 800px;
       height: 500px;
       margin: 0 auto;
-      background-color: #e0e0e0;
-      text-shadow: 2px 2px #000;
     }
 
-    
+    /* Boxes */
     #navy {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
       background-color: #001f3f;
+      color: white;
     }
 
     #teal {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
       background-color: #39CCCC;
     }
 
     #blue {
       position: absolute;
-      bottom: 10px;
-      left: 10px;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
       background-color: #0074D9;
     }
 
     #aqua {
       position: absolute;
-      bottom: 10px;
-      right: 10px;
+      bottom: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
       background-color: #7FDBFF;
     }
 
-
-    h1 {
-      color: black;
-      font-weight: normal;
-      text-align: center;
-      padding: 10px;
-      margin: 0;
-    }
-
-    
-    #middle {
-      position: absolute;
-      top: 140px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 70%;
-      height: 200px;
-      background-color: white;
-    }
-
-    
     #footer {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
       background-color: #666;
+      transform: translate(-50%, -50%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    h1 {
+      margin: 30px 0;
+      color: black;
+      font-weight: normal;
+    }
   </style>
 </head>
 
 <body>
-
   <h1>Exercise</h1>
 
   <section id="wrapper">
-
     <div id="navy">Navy</div>
     <div id="teal">Teal</div>
     <div id="blue">Blue</div>
     <div id="aqua">Aqua</div>
-
-    <div id="middle">
-      <div id="footer"></div>
-    </div>
-
+    <div id="footer">Footer</div>
   </section>
 
 </body>
-
 </html>
