@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <!-- Crucial for "autofitting" the page to mobile and tablet screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accomplishments | NASA Mars Rovers</title>
-  <meta name="description" content="Discover the major scientific breakthroughs and technical features of the Sojourner and Curiosity rovers.">
-  <meta name="robots" content="noindex">
-
-  <!-- Technical Requirement: External CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <header role="banner" class="site-header">
+  <header class="site-header">
     <div class="container header-flex">
-      <!-- Branding: Artemis Logo from assets folder -->
-      <img src="assets/ArtemisLogo.jpg" alt="NASA Artemis Program Logo" class="logo">
-      
+      <img src="assets/ArtemisLogo.jpg" alt="NASA Logo" class="logo">
       <div class="header-text">
         <h1>NASA Mars Rovers</h1>
         <p class="tagline">Robotic Explorers on the Red Planet</p>
       </div>
-
-      <nav role="navigation" aria-label="Main Navigation">
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="missions.html">Missions</a></li>
@@ -34,53 +24,29 @@
     </div>
   </header>
 
-  <main id="main-content" class="container">
-    <section class="intro">
-      <h2>Scientific Breakthroughs</h2>
-      <p>Each rover is a sophisticated mobile laboratory. From the first analysis of Martian rocks to the discovery of ancient organic molecules, these missions have redefined our understanding of the solar system.</p>
-    </section>
+  <main class="container">
+    <h2>Scientific Breakthroughs</h2>
+    <article class="rover-profile">
+      <div class="profile-text">
+        <h3>Sojourner Findings</h3>
+        <p>Evidence that Mars was once warm and wet.</p>
+      </div>
+      <img src="img/Sojourner.jpg" alt="Sojourner analyzing rocks" class="home-img">
+    </article>
 
-    <div class="divider"></div>
-
-    <!-- Rover 1: Sojourner Accomplishments -->
-    <section class="rover-achievement">
-      <article class="rover-profile">
-        <div class="profile-text">
-          <h3>Sojourner: Proving the Concept</h3>
-          <p><strong>Technical Features:</strong> Sojourner was equipped with an Alpha Proton X-ray Spectrometer (APXS) to determine the chemical composition of rocks and soil.</p>
-          <p><strong>Major Discovery:</strong> The mission provided evidence that Mars was once "warm and wet," with liquid water once flowing across the surface to create the floodplains of Ares Vallis.</p>
-        </div>
-        <img src="img/Sojourner.jpg" alt="A close-up of the Sojourner rover analyzing a Martian rock." class="home-img">
-      </article>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Rover 2: Curiosity Accomplishments -->
-    <section class="rover-achievement">
-      <article class="rover-profile">
-        <div class="profile-text">
-          <h3>Curiosity: Searching for Habitability</h3>
-          <p><strong>Technical Features:</strong> Curiosity features the 'ChemCam,' a laser that vaporizes rocks to study their composition from a distance, and a full chemistry lab in its belly (SAM).</p>
-          <p><strong>Major Discovery:</strong> Curiosity confirmed that Gale Crater once hosted a freshwater lake system that contained all the chemical ingredients necessary for microbial life.</p>
-        </div>
-        <img src="img/Curiosity.jpg" alt="Self-portrait of Curiosity showing its drill and complex scientific instruments." class="home-img">
-      </article>
-    </section>
+    <article class="rover-profile">
+      <div class="profile-text">
+        <h3>Curiosity Findings</h3>
+        <p>Confirmed Gale Crater was once a habitable lake bed.</p>
+      </div>
+      <img src="img/Curiosity.jpg" alt="Curiosity science lab" class="home-img">
+    </article>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Interested in more discoveries? Visit the <a href="https://science.nasa.gov/mission/msl-curiosity/" target="_blank" rel="noopener">NASA Science Mission Directorate</a>.</p>
-      <p>Contact the team: <a href="mailto:education@jpl.nasa.gov">education@jpl.nasa.gov</a></p>
-      
-      <hr>
-
-      <p class="disclaimer">
-        This website was created as a student project for educational purposes. NASA is not affiliated with or endorsing this work.
-      </p>
+      <p class="disclaimer">This website was created as a student project for educational purposes. NASA is not affiliated with or endorsing this work.</p>
     </div>
   </footer>
 </body>
-
 </html>

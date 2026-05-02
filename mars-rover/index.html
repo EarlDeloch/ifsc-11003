@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <!-- Crucial for "autofitting" to device screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | NASA Mars Rovers</title>
-  <meta name="description" content="Explore the history of Martian exploration through the eyes of the Sojourner and Curiosity rovers.">
-  <meta name="keywords" content="NASA, Mars, Sojourner, Curiosity, JPL, Space Exploration">
+  <meta name="description" content="Overview of NASA's Mars Rover Program.">
   <meta name="robots" content="noindex">
-
-  <!-- Technical Requirement: External CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
   <header role="banner" class="site-header">
     <div class="container header-flex">
-      <!-- Branding: Artemis Logo from assets folder -->
       <img src="assets/ArtemisLogo.jpg" alt="NASA Artemis Program Logo" class="logo">
-      
       <div class="header-text">
         <h1>NASA Mars Rovers</h1>
         <p class="tagline">Robotic Explorers on the Red Planet</p>
       </div>
-
       <nav role="navigation" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -36,48 +27,31 @@
   </header>
 
   <main id="main-content">
-    <!-- Hero section with Mars background -->
-    <section class="hero container" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/Mars.jpg'); background-size: cover; background-position: center; padding: 80px 20px; border-radius: 15px;">
+    <section class="hero container" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/Mars.jpg');">
       <h2>Curiosity-Driven Exploration</h2>
-      <p>
-        From the first wheels on the ground to car-sized laboratories, NASA's Mars Exploration Program 
-        seeks to answer one fundamental question: Was Mars ever home to microbial life?
-      </p>
+      <p>NASA's Mars Exploration Program seeks to answer whether Mars was ever home to microbial life.</p>
     </section>
 
-    <hr class="divider">
-
-    <!-- Responsive Grid Section -->
     <section class="container rover-intro">
       <article class="rover-card">
         <h3>Sojourner</h3>
-        <p><strong>Mission:</strong> Mars Pathfinder</p>
-        <p>As the first rover to operate on another planet, Sojourner proved that mobile exploration of the Red Planet was possible.</p>
-        <img src="img/Sojourner.jpg" alt="The Sojourner rover, a small microwave-sized explorer on the rocky Martian surface." class="home-img">
+        <p>The first rover to operate on another planet.</p>
+        <img src="img/Sojourner.jpg" alt="The Sojourner rover on Mars" class="home-img">
       </article>
 
       <article class="rover-card">
         <h3>Curiosity</h3>
-        <p><strong>Mission:</strong> Mars Science Laboratory</p>
-        <p>A car-sized rover designed to explore Gale Crater and assess whether Mars ever had an environment able to support life.</p>
-        <img src="img/Curiosity.jpg" alt="A self-portrait of the Curiosity rover at a drilling site on Mount Sharp." class="home-img">
+        <p>A car-sized laboratory exploring Gale Crater.</p>
+        <img src="img/Curiosity.jpg" alt="Curiosity rover self-portrait" class="home-img">
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Questions about the mission? <a href="mailto:education@jpl.nasa.gov">Contact JPL Education</a>.</p>
-      <p>Explore more at the official <a href="https://mars.nasa.gov" target="_blank" rel="noopener">NASA Mars Exploration website</a>.</p>
-
-      <hr>
-
-      <!-- Branding Requirement: Mandatory Disclaimer -->
-      <p class="disclaimer">
-        This website was created as a student project for educational purposes. NASA is not affiliated with or endorsing this work.
-      </p>
+      <p>Questions? <a href="mailto:education@jpl.nasa.gov">Contact JPL Education</a></p>
+      <p class="disclaimer">This website was created as a student project for educational purposes. NASA is not affiliated with or endorsing this work.</p>
     </div>
   </footer>
 </body>
-
 </html>
