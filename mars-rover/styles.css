@@ -1,6 +1,6 @@
 /*  
   Project: NASA Mars Rovers
-  Description: Complete responsive stylesheet with autofit image fixes
+  Description: Complete responsive stylesheet with "Mars Background" logic for all images.
 */
 
 /* --- Variables --- */
@@ -20,16 +20,16 @@
   padding: 0;
 }
 
-/* Forces images to stay within their containers */
+/* Global Safety: Prevents any image from being wider than the screen */
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100% !important;
+  height: auto !important;
   display: block;
 }
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* Stops horizontal scrolling/spilling */
+  overflow-x: hidden; /* Stops horizontal scrolling */
 }
 
 body {
@@ -102,7 +102,7 @@ nav a.active, nav a:hover {
   border-bottom: 2px solid var(--nasa-red);
 }
 
-/* --- Hero Section (Mars Background) --- */
+/* --- Hero Section (The "Mars Background" Reference) --- */
 .hero {
   text-align: center;
   margin-bottom: 40px;
@@ -113,18 +113,23 @@ nav a.active, nav a:hover {
   justify-content: center;
   min-height: 300px;
   border-radius: 15px;
+  padding: 20px;
 }
 
-/* --- Layout Systems (Grid & Flex) --- */
+/* --- Layout Systems --- */
 #main-content {
   padding: 40px 0;
 }
 
-/* Home Page Cards */
 .rover-intro {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+}
+
+.rover-card, .profile-text {
+  min-width: 0; /* Prevents text boxes from pushing width out */
+  word-wrap: break-word;
 }
 
 .rover-card {
@@ -132,32 +137,31 @@ nav a.active, nav a:hover {
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #333;
-  min-width: 0; /* Safety override for autofit */
 }
 
-/* Missions & Accomplishments Profiles */
 .rover-profile {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 
 .profile-text {
   flex: 1;
-  min-width: 280px; /* Forces wrap on mobile */
-  word-wrap: break-word;
+  min-width: 280px;
 }
 
-/* Responsive Images */
+/* --- The Image Fix: Using "Cover" logic for all Rover Photos --- */
 .home-img {
   width: 100%;
-  max-width: 550px; /* Prevents images from becoming massive on desktop */
-  height: auto;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;  /* Maintains cinematic shape */
+  object-fit: cover;     /* Crops/Fits like the Mars Hero background */
+  object-position: center; 
   border-radius: 8px;
-  margin: 15px auto;
+  margin: 15px 0;
+  display: block;
 }
 
 .divider {
@@ -170,7 +174,7 @@ nav a.active, nav a:hover {
 /* --- Tables --- */
 .timeline-section {
   width: 100%;
-  overflow-x: auto; /* Allows table to swipe on phone */
+  overflow-x: auto;
   margin: 30px 0;
   border-radius: 8px;
 }
@@ -203,7 +207,6 @@ nav a.active, nav a:hover {
 
 .site-footer a {
   color: var(--nasa-red);
-  text-decoration: none;
 }
 
 .disclaimer {
@@ -211,11 +214,10 @@ nav a.active, nav a:hover {
   color: #888;
   margin-top: 25px;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 25px auto 0;
 }
 
-/* --- Mobile Responsiveness --- */
+/* --- Mobile Specific Fixes --- */
 @media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
@@ -227,12 +229,11 @@ nav a.active, nav a:hover {
     padding-top: 10px;
   }
 
-  .hero {
-    padding: 40px 20px;
-    min-height: 200px;
-  }
-
   .hero h2 {
     font-size: 1.4rem;
+  }
+
+  .home-img {
+    aspect-ratio: 4 / 3; /* Slightly taller on mobile for better visibility */
   }
 }
