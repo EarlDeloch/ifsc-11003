@@ -1,6 +1,6 @@
 /*  
   Project: NASA Mars Rovers
-  Description: External responsive stylesheet for JPL educational project
+  Description: Complete responsive stylesheet with autofit image fixes
 */
 
 /* --- Variables --- */
@@ -13,16 +13,23 @@
   --transition: all 0.3s ease;
 }
 
-/* --- Base Reset & Responsiveness --- */
+/* --- Base Reset & Global Autofit --- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Forces images to stay within their containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 html, body {
   width: 100%;
-  overflow-x: hidden; /* Prevents unwanted side-scrolling */
+  overflow-x: hidden; /* Stops horizontal scrolling/spilling */
 }
 
 body {
@@ -32,7 +39,6 @@ body {
   line-height: 1.6;
 }
 
-/* Updated Container for Autofit */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -45,7 +51,7 @@ a:focus {
   outline-offset: 4px;
 }
 
-/* --- Header & Nav --- */
+/* --- Header & Navigation --- */
 .site-header {
   background: rgba(0, 0, 0, 0.95);
   padding: 20px 0;
@@ -58,12 +64,16 @@ a:focus {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* Allows nav to wrap on small screens */
+  flex-wrap: wrap;
 }
 
 .logo {
   height: 50px;
   width: auto;
+}
+
+.header-text h1 {
+  font-size: 1.5rem;
 }
 
 .tagline {
@@ -84,24 +94,33 @@ nav a {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.9rem;
+  transition: var(--transition);
 }
 
-nav a.active {
+nav a.active, nav a:hover {
   color: var(--nasa-red);
   border-bottom: 2px solid var(--nasa-red);
 }
 
-/* --- Main Content Layouts --- */
+/* --- Hero Section (Mars Background) --- */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+  border-radius: 15px;
+}
+
+/* --- Layout Systems (Grid & Flex) --- */
 #main-content {
   padding: 40px 0;
 }
 
-.hero {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* Fluid Grid for Rover Cards */
+/* Home Page Cards */
 .rover-intro {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -113,50 +132,58 @@ nav a.active {
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #333;
+  min-width: 0; /* Safety override for autofit */
 }
 
-/* Fluid Layout for Profile Articles */
+/* Missions & Accomplishments Profiles */
 .rover-profile {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .profile-text {
   flex: 1;
-  min-width: 280px;
+  min-width: 280px; /* Forces wrap on mobile */
+  word-wrap: break-word;
 }
 
+/* Responsive Images */
 .home-img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 550px; /* Prevents images from becoming massive on desktop */
   height: auto;
+  object-fit: cover;
   border-radius: 8px;
-  display: block;
+  margin: 15px auto;
 }
 
 .divider {
   border: 0;
   height: 1px;
-  background: #333;
+  background: linear-gradient(to right, transparent, #333, transparent);
   margin: 40px 0;
 }
 
-/* --- Table Responsiveness --- */
+/* --- Tables --- */
 .timeline-section {
   width: 100%;
-  overflow-x: auto; /* Allows horizontal swipe on mobile */
+  overflow-x: auto; /* Allows table to swipe on phone */
   margin: 30px 0;
+  border-radius: 8px;
 }
 
 .mission-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px; /* Ensures table doesn't squish too much */
+  min-width: 600px;
+  background: var(--card-bg);
 }
 
 .mission-table th, .mission-table td {
-  padding: 12px;
+  padding: 15px;
   text-align: left;
   border-bottom: 1px solid #333;
 }
@@ -171,15 +198,24 @@ nav a.active {
   padding: 40px 0;
   margin-top: 60px;
   text-align: center;
+  border-top: 1px solid #222;
+}
+
+.site-footer a {
+  color: var(--nasa-red);
+  text-decoration: none;
 }
 
 .disclaimer {
   font-size: 0.75rem;
   color: #888;
-  margin-top: 20px;
+  margin-top: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* --- Mobile Specific Fixes --- */
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
@@ -187,11 +223,16 @@ nav a.active {
   }
   
   nav ul {
-    gap: 10px;
+    gap: 15px;
     padding-top: 10px;
   }
-  
+
+  .hero {
+    padding: 40px 20px;
+    min-height: 200px;
+  }
+
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
