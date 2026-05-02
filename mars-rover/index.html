@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- Crucial for "autofitting" to device screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | NASA Mars Rovers</title>
   <meta name="description" content="Explore the history of Martian exploration through the eyes of the Sojourner and Curiosity rovers.">
@@ -35,8 +36,8 @@
   </header>
 
   <main id="main-content">
-    <!-- Hero section using your Mars background image -->
-    <section class="hero container" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/Mars.jpg'); background-size: cover; padding: 100px 20px; border-radius: 15px;">
+    <!-- Hero section with Mars background -->
+    <section class="hero container" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/Mars.jpg'); background-size: cover; background-position: center; padding: 80px 20px; border-radius: 15px;">
       <h2>Curiosity-Driven Exploration</h2>
       <p>
         From the first wheels on the ground to car-sized laboratories, NASA's Mars Exploration Program 
@@ -46,8 +47,8 @@
 
     <hr class="divider">
 
+    <!-- Responsive Grid Section -->
     <section class="container rover-intro">
-      <!-- Rover 1: Sojourner -->
       <article class="rover-card">
         <h3>Sojourner</h3>
         <p><strong>Mission:</strong> Mars Pathfinder</p>
@@ -55,7 +56,6 @@
         <img src="img/Sojourner.jpg" alt="The Sojourner rover, a small microwave-sized explorer on the rocky Martian surface." class="home-img">
       </article>
 
-      <!-- Rover 2: Curiosity -->
       <article class="rover-card">
         <h3>Curiosity</h3>
         <p><strong>Mission:</strong> Mars Science Laboratory</p>

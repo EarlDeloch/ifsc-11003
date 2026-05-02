@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- Essential for responsive "autofit" behavior -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Missions | NASA Mars Rovers</title>
   <meta name="description" content="Timeline of NASA's Mars missions, focusing on the launch and landing details of Sojourner and Curiosity.">
@@ -15,7 +16,6 @@
 <body>
   <header role="banner" class="site-header">
     <div class="container header-flex">
-      <!-- Branding: Artemis Logo from assets folder -->
       <img src="assets/ArtemisLogo.jpg" alt="NASA Artemis Program Logo" class="logo">
       
       <div class="header-text">
@@ -39,7 +39,7 @@
       <p>Since the 1990s, NASA has successfully landed multiple robotic explorers on Mars. Each mission represents a massive leap in engineering and coordination between Earth and the Red Planet.</p>
     </section>
 
-    <!-- Technical Requirement: Mission Timeline Table -->
+    <!-- Container for table scrolling on small screens -->
     <section class="timeline-section">
       <table class="mission-table">
         <caption>Mars Rover Launch and Landing Schedule</caption>
@@ -72,18 +72,16 @@
     </section>
 
     <section class="mission-details">
-      <!-- Sojourner Landing Info -->
       <article class="rover-profile">
         <div class="profile-text">
           <h3>The Pathfinder Mission</h3>
           <p>The Sojourner rover was delivered to the Martian surface via a tetrahedral lander wrapped in airbags. It was the first time NASA used this "bounce to a stop" landing method, which allowed for a safe arrival in the rocky Ares Vallis region.</p>
         </div>
-        <img src="img/Sorjourner2.jpg" alt="A photo of the Sojourner rover resting near its lander on the Martian surface." class="home-img">
+        <img src="img/Sojourner2.jpg" alt="The Sojourner rover resting near its lander on the Martian surface." class="home-img">
       </article>
 
       <hr class="divider">
 
-      <!-- Curiosity Landing Info -->
       <article class="rover-profile">
         <div class="profile-text">
           <h3>The Skycrane Maneuver</h3>
