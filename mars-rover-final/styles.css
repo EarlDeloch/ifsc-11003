@@ -1,0 +1,189 @@
+/*  
+  Project: NASA Mars Rovers - Clean Responsive Fix
+*/
+
+:root {
+  --nasa-blue: #0b3d91;
+  --nasa-red: #fc3d21;
+  --space-black: #0b0b0b;
+  --text-white: #ffffff;
+  --card-bg: #1a1a1a;
+}
+
+/* --- Global Reset --- */
+* {
+  box-sizing: border-box;
+  min-width: 0; /* 🔥 CRITICAL: prevents flex overflow */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--space-black);
+  color: var(--text-white);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* --- Container --- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-white);
+}
+
+.hero h2,
+.hero p {
+  color: var(--text-white);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* --- Images --- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+/* --- Header --- */
+.header-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--nasa-blue);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* --- Navigation --- */
+nav ul {
+  display: flex;
+  flex-wrap: wrap; /* 🔥 prevents overflow */
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Grid Cards --- */
+.rover-intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.rover-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+/* --- Rover Profiles --- */
+.rover-profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.rover-profile img {
+  flex: 1;
+  min-width: 0; /* 🔥 prevents overflow */
+}
+
+/* --- Tables --- */
+.timeline-section {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.mission-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+}
+
+.mission-table th {
+  background: var(--nasa-blue);
+  padding: 12px;
+  text-align: left;
+}
+
+.mission-table td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid #333;
+  margin-top: 50px;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rover-profile {
+    flex-direction: column;
+  }
+}
